@@ -1,0 +1,79 @@
+{
+  "title": "Game of Thrones",
+  "genre": ["Fantasy", " Action", "Adventure", "Drama"],
+  "episodes": null,
+  "ratings": [
+    { "IMDB": 9.3 },
+    { "TV.com": "9/10" },
+    { "ROTTEN TOMATO": "89%" }
+  ],
+  "number of seasons": 8,
+  "cast": [
+    { "Kit Harington": "Jon Snow" },
+    { "Emilia Clarke": "Daenerys Targaryen" },
+    { "Sophie Turner": "Sansa Stark" },
+    { "Maisie Williams": "Arya Stark" }
+  ],
+  "reviews": [
+    {
+      "user": "the reviwer",
+      "review": [
+        {
+          "time": 1591241446849,
+          "stars": 8,
+          "vote": "756/757",
+          "spoiler": false
+        },
+        "season 8 \ud83d\ude02\ud83d\udc4d",
+        "season 8 😂👍"
+      ]
+    },
+    {
+      "user": "I am Tony.",
+      "review": [
+        {
+          "time": 1591231446849,
+          "stars": 10,
+          "vote": "19090/19095",
+          "spoiler": false
+        },
+        "the GREATEST ever! \u2764",
+        "the GREATEST ever! ❤"
+      ]
+    },
+    {
+      "user": "Mary come here \\xf0\\x9f\\x91\\x84",
+      "review": [
+        {
+          "time": 1591231846849,
+          "stars": 2,
+          "vote": "100/100",
+          "spoiler": true
+        },
+        "dragon die for sb's terrible writing.",
+        19.0e-21,
+        19.0e2
+      ]
+    }
+  ],
+
+  "boola": [false, true, false, true, true, false],
+
+  "the best ever": {
+    "merge": 234,
+    "ary": [1, 2, 3, 4],
+    "why?": { "reason1": "brilliant!", "reason2": "wonderful" }
+  },
+  "test merge not map": {
+    "merge": 234,
+    "ary": [1, 2, 3],
+    "why?": { "reason1": "brilliant!", "reason2": "wonderful" }
+  },
+  "test merge no preserve": {
+    "merge": 234,
+    "so\"esca\tp\ned \\\u003cquote\u003e\u2028\u2029": "escaped",
+    "why?": { "reason1": "brilliant!", "reason2": "wonderful" }
+  },
+
+  "incr": [1, 2147483647, 9223372036854775807, 9.3, 123456.123456]
+}

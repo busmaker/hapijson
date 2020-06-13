@@ -1,0 +1,46 @@
+{
+  "title": "Game of Thrones",
+  "genre": ["Fantasy", " Action", "Adventure", "Drama"],
+  "episodes": null,
+  "liked": true,
+  "ratings": [
+    { "IMDB": 9.3 },
+    { "TV.com": "9/10" },
+    { "ROTTEN TOMATO": "89%" }
+  ],
+  "number of seasons": 8,
+  "cast": [
+    { "Kit Harington": "Jon Snow", "another": 32423 },
+    { "Emilia Clarke": "Daenerys Targaryen" },
+    { "Sophie Turner": "Sansa Stark" },
+    { "Maisie Williams": "Arya Stark" }
+  ],
+  "reviews": [
+    {
+      "user": "the reviwer",
+      "review": [
+        {
+          "time": 1591241446849,
+          "stars": 8,
+          "vote": "756/757",
+          "spoiler": false
+        },
+        "season 8 \ud83d\ude02\ud83d\udc4d",
+        "season 8 😂👍"
+      ]
+    },
+    {
+      "user": "I am Tony.",
+      "review": [
+        "the GREATEST ever! \u2764",
+        "the GREATEST ever! ❤",
+        {
+          "time": 1591231446849,
+          "stars": 10,
+          "vote": "19090/19095",
+          "spoiler": false
+        }
+      ]
+    }
+  ]
+}
