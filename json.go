@@ -1584,7 +1584,18 @@ const (
 	hex = "0123456789abcdef"
 )
 
-// copy from encoding/json HTMLEscape because it's 3x faster than the my wrote one.
+var (
+	escapeMap = map[byte]string{
+		'"':  `\"`,
+		'\n': `\n`,
+		'\t': `\t`,
+		'\r': `\r`,
+		'\f': `\f`,
+		'\b': `\b`,
+	}
+)
+
+// copy from encoding/json HTMLEscape because it's 3x faster than mine wrote one.
 func escape(src string) string {
 	var dst bytes.Buffer
 	start := -1
@@ -1612,12 +1623,12 @@ func escape(src string) string {
 			continue
 		}
 
-		if c == '"' {
+		if esp, ok := escapeMap[c]; ok {
 			if start > -1 {
 				dst.WriteString(src[start:i])
 				start = -1
 			}
-			dst.WriteString(`\"`)
+			dst.WriteString(esp)
 			continue
 		}
 
