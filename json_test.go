@@ -1172,3 +1172,22 @@ func TestIncrAndDecr(t *testing.T) {
 	}
 
 }
+
+
+//temp
+
+func TestFixBugInRemove(t    *testing.T) {
+	json:=`{"posters":["http://www.ibttt.net/Uploads/vod/2019-07-16/5d2d350f42cdd.jpg"],"playlinks":[{"source":["https://iqiyi.cdn27-okzy.com/20200519/4010_1fd8a5ff/index.m3u8"],"desc":"HD高清","originalPage":"http://www.ibttt.net/dongzuo/yalikesikeluosi/1-1"},{"source":["https://guihua.feifei-kuyun.com/20191115/25626_719ea16f/index.m3u8?sign=f96922f656b341b791fd41995d46b44e"],"desc":"HD720P中字","originalPage":"http://www.ibttt.net/dongzuo/yalikesikeluosi/3-1"}],"names":["亚历克斯·克洛斯"],"areas":["美国"],"langs":["普通话"],"writers":[],"year":2012,"stars":["泰勒·派瑞","马修·福克斯","瑞秋·尼科尔斯","让·雷诺"],"genres":["动作电影"],"directors":["罗伯·科恩"],"runtime":-1,"storyline":"亚历克斯（泰勒·派瑞 Tyler Perry 饰）专门负责大型刑事案件的 
+侦查和侦破。一名台湾女孩在一栋豪宅内遭受性虐杀，连同她的私人保镖等数人也都无一幸免，亚历克斯奉命接受此案的调查。而这起凶案似乎与环杀手迈克尔（马修·福克斯 Matthew Fox 饰）有关。他经验丰富、冷血
+残酷，总比警方快一步，每次犯案后都能顺利逃脱。为了挑衅亚历克斯，他在他们的结婚周年日给亚历克斯打了警告电话，并当着他的面杀死了他的妻子（瑞秋·尼科尔斯 Rachel Nichols 饰）。亚历克斯失去妻子的痛 
+苦，也激发他抓拿迈克尔的决心。而通过对虐杀案抽丝剥茧慢慢靠近谋杀案的真相时，重要的涉案关系人却一一遭到杀害。最后艾力克斯追寻到了一个只要你有钱任何梦想都可以实现的性爱乐园，而涉案人的政商关系好
+到简直令人匪夷所思的地步，如果案情爆开来世界将为之震动....."}`
+
+	jsonBS := []byte(json)
+	Remove(jsonBS, "posters")
+	// t.Log(string(jsonBS))
+	Remove(jsonBS, "playlinks")
+	// t.Log(string(jsonBS))
+	Remove(jsonBS, "storyline")
+	t.Log(string(jsonBS))
+}

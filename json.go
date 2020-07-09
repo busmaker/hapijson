@@ -171,13 +171,14 @@ func remove(payload []byte, start, end, veryStart, rootEnd int) (newPayload []by
 	// if the key set or element is in the middle of values,
 	// we need to remove its seperator the comma ',' as well,
 	// e.g. [..., "want removed", ...], we need to remove either its left one or the right one comma.
-	// luckly, veryStart points the very start of a key or an element, which may be one of the ',' '[' or '{',
-	// so we don't need loop forward, when veryStart is pointing to ','.
+	// luckly, veryStart points to the very start of a key or an element, which may be one of the ',' '[' or '{' characters,
+	// so we don't need looping forward when veryStart is pointing to ','.
 
 	if payload[veryStart] == ',' {
 		start = veryStart
 	} else { //
-		// start++ // keep the [ or {
+		// veryStart + 1, keep the [ or {
+		start = veryStart + 1	
 		if payload[end] != ',' {
 		forwarding: // forwarding to see if there is a ','
 			for ; end < len(payload); end++ {
