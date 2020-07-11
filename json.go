@@ -1323,6 +1323,21 @@ func toJSON(val interface{}) (j []byte, jtype valType, e error) {
 	return
 }
 
+// JSON jsonfy a value to json data, not supporting struct type.
+func JSON(val interface{}) (data []byte, e error){
+	data, _, e = toJSON(val)
+	return
+}
+
+// FromJSON parse data into an go val.
+func FromJSON(data []byte) (val interface{}, e error){
+	start, end, _, vtype, e := path(data, 0)
+	if e == nil {
+		val, e = fromJSON(data, start, end, vtype)
+	} 
+	return 
+}
+
 const (
 	int32Max = "2147483647"
 	int64Max = "9223372036854775807"
